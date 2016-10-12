@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29963C351DAE360200CAFF39 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29963C341DAE360200CAFF39 /* CorePlot.framework */; };
+		29963C381DAE3BF900CAFF39 /* CorePlot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29963C341DAE360200CAFF39 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29F7D35B1DADF07D00E2D98D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F7D35A1DADF07D00E2D98D /* AppDelegate.swift */; };
 		29F7D35D1DADF07D00E2D98D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F7D35C1DADF07D00E2D98D /* ViewController.swift */; };
 		29F7D35F1DADF07D00E2D98D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F7D35E1DADF07D00E2D98D /* Assets.xcassets */; };
@@ -14,7 +16,22 @@
 		29F7D36A1DADF09A00E2D98D /* Corpus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F7D3691DADF09A00E2D98D /* Corpus.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		29963C371DAE3BF000CAFF39 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				29963C381DAE3BF900CAFF39 /* CorePlot.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		29963C341DAE360200CAFF39 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CorePlot.framework; sourceTree = "<group>"; };
+		29963C361DAE364C00CAFF39 /* Concord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Concord-Bridging-Header.h"; sourceTree = "<group>"; };
 		29F7D3571DADF07C00E2D98D /* Concord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F7D35A1DADF07D00E2D98D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29F7D35C1DADF07D00E2D98D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,16 +46,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29963C351DAE360200CAFF39 /* CorePlot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29963C331DAE360200CAFF39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29963C341DAE360200CAFF39 /* CorePlot.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		29F7D34E1DADF07C00E2D98D = {
 			isa = PBXGroup;
 			children = (
 				29F7D3591DADF07C00E2D98D /* Concord */,
+				29963C331DAE360200CAFF39 /* Frameworks */,
 				29F7D3581DADF07C00E2D98D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +81,7 @@
 		29F7D3591DADF07C00E2D98D /* Concord */ = {
 			isa = PBXGroup;
 			children = (
+				29963C361DAE364C00CAFF39 /* Concord-Bridging-Header.h */,
 				29F7D35A1DADF07D00E2D98D /* AppDelegate.swift */,
 				29F7D35C1DADF07D00E2D98D /* ViewController.swift */,
 				29F7D3691DADF09A00E2D98D /* Corpus.swift */,
@@ -74,6 +102,7 @@
 				29F7D3531DADF07C00E2D98D /* Sources */,
 				29F7D3541DADF07C00E2D98D /* Frameworks */,
 				29F7D3551DADF07C00E2D98D /* Resources */,
+				29963C371DAE3BF000CAFF39 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -250,6 +279,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Concord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rxwei.Concord;
@@ -263,6 +296,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Concord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rxwei.Concord;
@@ -290,6 +327,7 @@
 				29F7D3681DADF07D00E2D98D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
