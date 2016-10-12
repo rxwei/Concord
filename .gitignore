@@ -1,0 +1,11 @@
+# Mac OS X filesystem metadata
+.DS_Store
+
+# Xcode user artifacts
+xcuserdata
+project.xcworkspace
+
+Build
+.build
+.configuration
+
